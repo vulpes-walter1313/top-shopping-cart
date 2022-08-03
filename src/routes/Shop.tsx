@@ -1,7 +1,10 @@
 import React from 'react'
+import Layout from '../components/Layout'
 
 export default function Shop() {
   return (
-    <div>Shop here</div>
+    <Layout>
+      <h1>Shop Here</h1>
+    </Layout>
   )
 }
