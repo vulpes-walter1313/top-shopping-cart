@@ -8,9 +8,11 @@ type LayoutProps = {
 
 export default function Layout({children}: LayoutProps) {
   return (
-    <div>
-      <Navbar />
-      {children}
+    <div style={{ display: "flex", flexFlow: "column nowrap", justifyContent: "space-between", minHeight: "100vh"}}>
+      <div>
+        <Navbar />
+        {children}
+      </div>
       <Footer />
     </div>
   )
