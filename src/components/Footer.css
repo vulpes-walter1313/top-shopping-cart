@@ -1,0 +1,53 @@
+.footer {
+  background-color: var(--neutral-black);
+  color: var(--neutral-white);
+  padding: 3rem 2rem 1rem;
+}
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+    "left"
+    "right"
+    "center";
+  gap: 1rem;
+  place-items: center;
+}
+.footer-content .footer-right-links {
+  grid-area: left;
+}
+.footer-content .footer-right-links {
+  grid-area: right;
+}
+.footer-content .footer-bottom-center {
+  grid-area: center;
+}
+.footer-content a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.2rem;
+}
+.footer-content li {
+  list-style: none;
+  text-align: center;
+}
+/* Media Quieries */
+
+@media screen and (min-width: 48em) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+      "left right"
+      "center center";
+    place-items: unset;
+  }
+  .footer-content li {
+    text-align: left;
+  }
+  .footer-right-links li {
+    text-align: right;
+  }
+  .footer-bottom-center p {
+    text-align: center;
+  }
+}
