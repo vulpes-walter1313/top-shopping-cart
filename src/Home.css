@@ -1,0 +1,105 @@
+.hero-home {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  justify-items: center;
+  gap: 2rem;
+  align-content: center;
+  align-items: center;
+  min-height: min(50vh, 36em);
+  color: var(--neutral-white);
+  background-color: rgb(0, 0, 0, 0.3);
+  background-blend-mode: multiply;
+}
+
+/* Featured Trees Section */
+.featured-trees-sec h2 {
+  text-align: center;
+  padding: 2rem;
+}
+.featured-trees-container {
+  display: grid;
+  justify-content: center;
+  margin: 0 auto 3rem;
+  width: 80vw;
+  max-width: 63rem;
+  gap: 2rem;
+}
+
+.tree-card img {
+  width: 100%;
+}
+.tree-card p {
+  color: var(--neutral-black);
+}
+.tree-card .tree-card-name {
+  font-size: 1.25rem;
+  color: var(--clr-acc-1);
+  padding: 1rem 0;
+}
+.tree-card .btn-one {
+  margin: 1rem auto;
+}
+
+/* Testimonial Section */
+.testimonial-sec {
+  display: grid;
+  background-color: var(--neutral-color);
+}
+.testimonial-image img {
+  width: 100%;
+  height: 100%;
+}
+.testimonial-quote-container blockquote::before {
+  content: "“";
+  color: var(--clr-primary);
+  font-size: 4rem;
+  transform: translate(40px);
+}
+.testimonial-quote-container figure {
+  padding: 1rem;
+}
+.testimonial-quote-container figcaption::before {
+  content: "― ";
+  color: var(--clr-primary);
+}
+.testimonial-quote-container figcaption {
+  padding: 1rem 0;
+  color: var(--clr-primary);
+  font-size: 1.2rem;
+}
+.testimonial-quote-container blockquote {
+  font-size: 1.5rem;
+  color: var(--neutral-black);
+}
+/* The Mission Section */
+
+.home-mission-sec {
+  background-color: var(--clr-primary);
+  color: var(--neutral-white);
+  display: grid;
+  place-items: center;
+  height: 20rem;
+}
+.home-mission-sec .home-mission-content {
+  max-width: 40rem;
+  padding: 2rem;
+}
+.home-mission-sec .home-mission-content h2 {
+  text-align: center;
+  margin: 0 0 2rem;
+}
+.home-mission-sec .home-mission-content p {
+  font-size: 1.2rem;
+}
+
+/* Media quiries */
+@media screen and (min-width: 48rem) {
+  .featured-trees-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .testimonial-sec {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
