@@ -1,13 +1,12 @@
 import React from "react";
-import Navbar from "./components/Navbar";
 import "./App.css";
 import "./Home.css";
 import { Link } from "react-router-dom";
+import Layout from "./components/Layout";
 
 function App() {
   return (
-    <div>
-      <Navbar />
+    <Layout>
       <header
         className="hero-home"
         style={{ backgroundImage: "url('./images/tree.jpg')" }}
@@ -61,7 +60,7 @@ function App() {
           <p>Our mission is to spread a wave of reforestation and aforestation to make up for all the trees humanity has unjustifiably chopped down.</p>
         </div>
       </section>
-    </div>
+    </Layout>
   );
 }
 
