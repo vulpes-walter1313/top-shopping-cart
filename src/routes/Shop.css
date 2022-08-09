@@ -1,0 +1,112 @@
+.shop-header {
+  display: grid;
+  margin: 3rem 0;
+  place-items: center;
+}
+.shop-header h1 {
+  font-size: 2.5rem;
+}
+
+.shop-products-container {
+  display: grid;
+  margin: 1rem 0 0;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.shop-product-categories-container {
+  background-color: var(--neutral-color);
+  padding: 1rem;
+  width: min(100vw, 48em);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.shop-product-categories-container p {
+  font-weight: 700;
+  text-align: center;
+}
+
+.shop-product-categories-container ul li {
+  list-style: none;
+}
+
+.shop-product-categories-container ul {
+  display: flex;
+  margin: 1rem 0;
+  gap: .5rem;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.shop-products-container {
+  width: min(100vw, 80rem);
+  margin: 0 auto;
+  
+}
+.shop-products-list-container {
+  padding: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1.5rem;
+}
+.shop-product-card {
+  /* flex item property */
+  flex:1 0 15.625rem;
+  /* flex container properties */
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  /* misc properties */
+  background-color: var(--neutral-color);
+  color: var(--neutral-black);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.shop-product-card .shop-product-details {
+  padding: 1rem;
+}
+.shop-product-card img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.product-name {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--neutral-black);
+}
+.product-details {
+  padding: .5rem 1.2rem;
+}
+.product-buttons {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+.product-buttons .product-button {
+  border-style: none;
+  background-color: var(--clr-acc-2);
+  color: var(--neutral-white);
+  font-size: 1.2rem;
+  padding: .5rem 0;
+  border-radius: 8px;
+}
+.product-buttons .product-button:hover {
+  transform: scale(.96);
+}
+
+/* media quieries */
+@media screen and (min-width: 48em) {
+  .shop-products-container {
+    grid-template-columns: 15rem auto;
+  }
+  .shop-product-categories-container {
+    background-color: var(--neutral-color);
+    padding: 1rem;
+    width: unset;
+    height: fit-content;
+  }
+}
+
+@media screen and (min-width: 80rem) {
+}
