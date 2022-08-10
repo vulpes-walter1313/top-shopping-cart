@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import Layout from "../components/Layout";
 import data from "../data/trees.json";
 import "./Shop.css";
@@ -54,6 +54,7 @@ export default function Shop() {
           })}
         </main>
       </div>
+      <Outlet />
     </Layout>
   );
 }
