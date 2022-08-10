@@ -1,3 +1,29 @@
 .prod-detail-wrapper {
-  background-color: aquamarine;
+  background-color: rgba(38,33,30,.47);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0%;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.prod-detail-content {
+  background-color: var(--neutral-black);
+  color: var(--neutral-white);
+  width: min(80vw, 56em);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+.prod-detail-content img {
+  width: 100%;
+}
+.prod-detail-content ul {
+  padding: 1rem;
+}
+.prod-detail-description .tree-title {
+  font-size: 2.5rem;
 }
