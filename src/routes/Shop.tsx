@@ -1,10 +1,11 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
 import data from "../data/trees.json";
 import "./Shop.css";
 
 export default function Shop() {
+  let navigate = useNavigate();
   return (
     <Layout>
       <header className="shop-header">
@@ -46,7 +47,7 @@ export default function Shop() {
                   </div>
                 </div>
                 <div className="product-buttons">
-                  <button className="product-button">View Details</button>
+                  <button onClick={() => {navigate("/shop/" + tree.id)}} className="product-button">View Details</button>
                   <button className="product-button">Add to Cart</button>
                 </div>
               </div>
