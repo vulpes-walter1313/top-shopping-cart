@@ -93,6 +93,7 @@
 }
 .product-buttons .product-button:hover {
   transform: scale(.96);
+  cursor: pointer;
 }
 
 /* media quieries */
