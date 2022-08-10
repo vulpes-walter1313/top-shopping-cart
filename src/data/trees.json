@@ -4,62 +4,71 @@
     "name": "Acasia, Sweet",
     "desc": "A common shrub or small tree with light green foliage.",
     "leaf": "Semi-evergreen",
-    "img": "/images/trees/tree-1.jpg"
+    "img": "/images/trees/tree-1.jpg",
+    "price": 19.99
   },
   {
     "id": 2,
     "name": "Acasia, Wright",
     "desc": "This small tree rarely reaches a height of 30 feet or a trunk up to 12\" in diameter.",
     "leaf": "Semi-evergreen",
-    "img": "/images/trees/tree-2.jpg"
+    "img": "/images/trees/tree-2.jpg",
+    "price": 29.99
   },
   {
     "id": 3,
     "name": "Anacahuita",
     "desc": "A small tree with a curving trunk, to 20 feet tall and a trunk to 12\" in diameter, with a low, rounded crown.",
     "leaf": "Evergreen",
-    "img": "/images/trees/tree-3.jpg"
+    "img": "/images/trees/tree-3.jpg",
+    "price": 19.98
   },
   {
     "id": 4,
     "name": "Anacua",
     "desc": "A medium-sized tree to 50 feet tall and a trunk to 2 feet in diameter, with a dense, round crown of dark green foliage.",
     "leaf": "Semi-evergreen",
-    "img": "/images/trees/tree-4.jpg"
+    "img": "/images/trees/tree-4.jpg",
+    "price": 17.98
   },
   {
     "id": 5,
     "name": "Apes-earring, Ebony",
     "desc": "A thorny shrub up to a medium-sized tree, 40 feet tall and a trunk to 2 feet in diameter, with thick, spreading branches that form a dense, dark green crown of foliage.",
     "leaf": "Evergreen",
-    "img": "/images/trees/tree-5.jpg"
+    "img": "/images/trees/tree-5.jpg",
+    "price": 21.98
   },
   {
     "id": 6,
     "name": "Mexican Ash",
     "desc": "A medium-sized tree to 40 feet tall and a trunk to 2 feet in diameter, with a broad, densely-branched, rounded crown and branches that tend to droop towards the ground.",
     "leaf": "Deciduous",
-    "img": "/images/trees/tree-6.jpg"
+    "img": "/images/trees/tree-6.jpg",
+    "price": 22.97
   },
   {
     "id": 7,
     "name": "Ash, Green",
     "desc": "A large forest tree to 70 feet and a trunk to 2 feet in diameter, with spreading branches and an oval crown.",
     "leaf": "Deciduous",
-    "img": "/images/trees/tree-7.jpg"
+    "img": "/images/trees/tree-7.jpg",
+    "price": 23.96
   },
   {
     "id": 8,
     "name": "Ash, Mountain",
     "desc": "A medium-sized tree to 45 feet tall and a trunk to 2 feet in diameter, with an oval crown.",
     "leaf": "Deciduous",
-    "img": "/images/trees/tree-8.jpg"
+    "img": "/images/trees/tree-8.jpg",
+    "price": 24.95
   },
   {
     "id": 9,
     "name": "Ash, Prickly",
     "desc": "A small tree, seldom over 30 feet in height, with a short trunk usually under 12\" in diameter.",
     "leaf": "Deciduous",
-    "img": "/images/trees/tree-9.jpg"
+    "img": "/images/trees/tree-9.jpg",
+    "price": 25.94
   }
 ]
