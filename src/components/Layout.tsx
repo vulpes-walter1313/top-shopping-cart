@@ -1,7 +1,6 @@
 import React from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-import useCartLocalStorage from "../hooks/useCartLocalStorage";
 import type {CartData} from "../hooks/useCartLocalStorage";
 
 type LayoutProps = {
