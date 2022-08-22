@@ -1,19 +1,30 @@
-import React from 'react'
-import Footer from './Footer';
-import Navbar from './Navbar'
+import React from "react";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
+import useCartLocalStorage from "../hooks/useCartLocalStorage";
+import type {CartData} from "../hooks/useCartLocalStorage";
 
 type LayoutProps = {
   children: React.ReactNode;
-}
+  cartItems?: CartData;
+};
 
-export default function Layout({children}: LayoutProps) {
+export default function Layout({ children, cartItems }: LayoutProps) {
   return (
-    <div style={{ display: "flex", flexFlow: "column nowrap", justifyContent: "space-between", minHeight: "100vh"}}>
+    <div
+      style={{
+        display: "flex",
+        flexFlow: "column nowrap",
+        justifyContent: "space-between",
+        minHeight: "100vh",
+      }}
+    >
       <div>
         <Navbar />
+        <div>Items in Cart: {cartItems?.length}</div>
         {children}
       </div>
       <Footer />
     </div>
-  )
+  );
 }
