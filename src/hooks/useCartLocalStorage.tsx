@@ -5,7 +5,7 @@ interface CartItem {
   quantity: number;
 }
 
-type CartData = CartItem[];
+export type CartData = CartItem[];
 
 type AddToCartAction = {
   type: "add" | "delete" | "update";
