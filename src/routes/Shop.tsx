@@ -12,7 +12,7 @@ export default function Shop() {
     cartDispatch({type: "add", payload: {id, quantity }})
   }
   return (
-    <Layout>
+    <Layout cartItems={cartData}>
       <header className="shop-header">
         <h1>Tree Products</h1>
       </header>
