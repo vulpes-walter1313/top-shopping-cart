@@ -20,7 +20,6 @@ export default function Layout({ children, cartItems }: LayoutProps) {
     >
       <div>
         <Navbar cartItems={cartItems}/>
-        <div>Items in Cart: {cartItems?.length}</div>
         {children}
       </div>
       <Footer />
