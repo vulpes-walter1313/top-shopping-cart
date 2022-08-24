@@ -4,7 +4,7 @@ import { Outlet, useOutletContext } from "react-router-dom";
 import useCartLocalStorage from "./hooks/useCartLocalStorage";
 import type { AddToCartAction, CartData } from "./hooks/useCartLocalStorage";
 
-type ContextType = [cartData: CartData, cartDispatch: React.Dispatch<AddToCartAction>]
+export type ContextType = [cartData: CartData, cartDispatch: React.Dispatch<AddToCartAction>]
 
 function App() {
   const [cartData, cartDispatch] = useCartLocalStorage();
