@@ -66,7 +66,7 @@ function cartReducer(
 
     case "delete":
       // delete item
-      return state.filter((item) => item.productId === action.payload.id);
+      return state.filter((item) => item.productId !== action.payload.id);
 
     case "update":
       let newState = state.map((item) => {
