@@ -72,7 +72,7 @@ export default function Shop() {
           })}
         </main>
       </div>
-      <Outlet />
+      <Outlet context={[cartData, cartDispatch]}/>
     </>
   );
 }
