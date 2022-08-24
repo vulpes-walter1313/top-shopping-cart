@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import "./ProductDetail.css";
 import { useParams, useNavigate } from 'react-router-dom';
 import data from "../data/trees.json";
+import { useOutletContext } from 'react-router-dom';
+import type { ContextType } from "../App";
 
 
 export default function ProductDetail() {
@@ -9,6 +11,10 @@ export default function ProductDetail() {
   let params = useParams();
   let tree = data.find(tree => tree.id === parseInt(params.productId as string));
   const [quantity, setQuantity] = useState(1);
+  const [cartData, cartDispatch] = useOutletContext<ContextType>();
+  function addToCart(quantity: number) {
+    cartDispatch({type: "add", payload: { id: tree!.id, quantity}});
+  }
 
   const quantityChangeHandler: React.ChangeEventHandler<HTMLInputElement> = (e) => {
     if (parseInt(e.target.value) < 1) {
@@ -41,8 +47,13 @@ export default function ProductDetail() {
             <p>${tree?.price}</p>
           </div>
           <div className='prod-detail-desc-buttons'>
-            <button>Add To Cart</button>
-            <button>Buy Now</button>
+            <button onClick={() => {
+              addToCart(quantity);
+            }}>Add To Cart</button>
+            <button onClick={() => {
+              addToCart(quantity);
+              navigate("/cart");
+            }}>Buy Now</button>
           </div>
         </div>
       </div>
