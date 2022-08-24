@@ -1,0 +1,6 @@
+.cart-main {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  max-width: 75em;
+  margin: 0 auto;
+}
