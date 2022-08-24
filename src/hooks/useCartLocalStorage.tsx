@@ -7,7 +7,7 @@ interface CartItem {
 
 export type CartData = CartItem[];
 
-type AddToCartAction = {
+export type AddToCartAction = {
   type: "add" | "delete" | "update";
   payload: {
     id: number;
