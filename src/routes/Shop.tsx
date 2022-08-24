@@ -1,11 +1,11 @@
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import data from "../data/trees.json";
 import "./Shop.css";
-import useCartLocalStorage from "../hooks/useCartLocalStorage";
+import { useCartContext } from "../App";
 
 export default function Shop() {
   let navigate = useNavigate();
-  let [cartData, cartDispatch] = useCartLocalStorage();
+  let [cartData, cartDispatch] = useCartContext();
   function addItemToCart(id: number, quantity: number) {
     cartDispatch({ type: "add", payload: { id, quantity } });
   }
