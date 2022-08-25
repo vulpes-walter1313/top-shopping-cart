@@ -2,10 +2,17 @@ import React from "react";
 import "./Cart.css";
 import treeData from "../data/trees.json";
 import { useCartContext } from "../App";
-import { parseJsonConfigFileContent } from "typescript";
 
 export default function Cart() {
   const [cartData, cartDispatch] = useCartContext();
+
+  const subtotal: number = cartData.reduce((prevVal: number, item ): number => {
+    let tree = treeData.find(tree => tree.id === item.productId)
+    const total = tree?.price! * item.quantity;
+    return prevVal + total;
+  }, 0);
+  const taxRate = 1.0825;
+  const grandTotal = (subtotal * taxRate)
 
   return (
     <main className="cart-main">
@@ -21,16 +28,16 @@ export default function Cart() {
                 <div className="cart-item-img">
                   <img src={tree?.img} alt={tree?.desc}/>
                 </div>
-                <div>
+                <div className="cart-item-info">
                   <h3>{tree?.name}</h3>
-                  <div>
+                  <div className="cart-item-quantity-group">
                     <p>Quantity: </p>
                     <input type="number" value={item.quantity} onChange={(e) => {cartDispatch({type: "update", payload: {id: item.productId, quantity: parseInt(e.target.value)}})}} />
                   </div>
                 </div>
-                <div>
+                <div className="cart-item-numbers">
                   <p>${tree?.price} ea.</p>
-                  <p>${tree?.price! * item.quantity}</p>
+                  <p>${(tree?.price! * item.quantity).toFixed(2)}</p>
                   <button onClick={() => cartDispatch({type: "delete", payload: {id: item.productId}})}>Remove</button>
                 </div>
               </div>
@@ -40,6 +47,18 @@ export default function Cart() {
       </div>
       <div>
         <h2>Order Totals</h2>
+        <div>
+          <p>Subtotal</p>
+          <p>${subtotal.toFixed(2)}</p>
+        </div>
+        <div>
+          <p>Tax</p>
+          <p>8.25%</p>
+        </div>
+        <div>
+          <p>Grand Total</p>
+          <p>${grandTotal.toFixed(2)}</p>
+        </div>
       </div>
     </main>
     );
