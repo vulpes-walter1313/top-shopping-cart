@@ -3,4 +3,54 @@
   grid-template-columns: 1fr 350px;
   max-width: 75em;
   margin: 0 auto;
+  gap: 1.5rem;
+}
+
+.cart-items-group {
+  display: flex;
+  flex-flow: column;
+  gap: 1.5rem;
+  margin: 1rem 0 1rem;
+}
+.cart-item {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 2px solid var(--neutral-black);
+  border-bottom: 2px solid var(--neutral-black);
+  padding: 1rem 0;
+  grid-template-areas: 
+  "img name name numbers";
+  gap: 0 1rem;
+}
+.cart-item-img {
+  grid-area: img;
+}
+.cart-item-img img {
+  width: 100%;
+}
+.cart-item-info {
+  grid-area: name;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+.cart-item-info h3 {
+  font-size: 3.2rem;
+  font-weight: 400;
+}
+.cart-item-numbers {
+  grid-area: numbers
+}
+
+.cart-item-quantity-group {
+  display: flex;
+  gap: 2rem;
+}
+
+.cart-item-quantity-group input[type="number"] {
+  width: 3rem;
+}
+.cart-item-quantity-group > p {
+  font-size: 1.4rem;
+  color: rgb(65,65,65);
 }
