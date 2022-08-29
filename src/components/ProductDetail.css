@@ -58,7 +58,7 @@
   padding: .75rem;
   margin: .5rem 0 0;
   background-color: var(--clr-acc-2);
-  border-radius: 8px;
+  border-radius: 8px; 
 }
 
 @media screen and (min-width: 48em) {
