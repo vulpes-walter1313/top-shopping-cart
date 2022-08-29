@@ -37,7 +37,7 @@ export default function Cart() {
                 </div>
                 <div className="cart-item-numbers">
                   <p>${tree?.price} ea.</p>
-                  <p>${(tree?.price! * item.quantity).toFixed(2)}</p>
+                  <p>Total ${(tree?.price! * item.quantity).toFixed(2)}</p>
                   <button onClick={() => cartDispatch({type: "delete", payload: {id: item.productId}})}>Remove</button>
                 </div>
               </div>
@@ -45,7 +45,7 @@ export default function Cart() {
           })}
         </div>
       </div>
-      <div>
+      <div className="cart-order-totals-group">
         <h2>Order Totals</h2>
         <div>
           <p>Subtotal</p>

@@ -1,8 +1,9 @@
 .cart-main {
   display: grid;
-  grid-template-columns: 1fr 350px;
+  grid-template-columns: 1fr;
   max-width: 75em;
-  margin: 0 auto;
+  margin: 3rem auto 3rem;
+  padding: 0 1rem;
   gap: 1.5rem;
 }
 
@@ -15,12 +16,14 @@
 .cart-item {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+
   border-top: 2px solid var(--neutral-black);
   border-bottom: 2px solid var(--neutral-black);
   padding: 1rem 0;
   grid-template-areas: 
-  "img name name numbers";
-  gap: 0 1rem;
+  "img name name name"
+  ". numbers numbers .";
+  gap: 1rem;
 }
 .cart-item-img {
   grid-area: img;
@@ -39,7 +42,20 @@
   font-weight: 400;
 }
 .cart-item-numbers {
-  grid-area: numbers
+  grid-area: numbers;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.cart-item-numbers button {
+  background-color: var(--clr-acc-2);
+  color: var(--neutral-white);
+  border-style: none;
+  padding: .65rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
 }
 
 .cart-item-quantity-group {
@@ -53,4 +69,65 @@
 .cart-item-quantity-group > p {
   font-size: 1.4rem;
   color: rgb(65,65,65);
+}
+
+.cart-order-totals-group div {
+  display: flex;
+  padding: .2rem 1.5rem;
+  justify-content: space-between;
+}
+.cart-order-totals-group div:first-of-type {
+  margin: 1rem 0 0;
+}
+
+@media screen and (min-width: 44.625rem) {
+  .cart-item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 2px solid var(--neutral-black);
+    border-bottom: 2px solid var(--neutral-black);
+    padding: 1rem 0;
+    grid-template-areas: 
+    "img name name numbers";
+    gap: 0 1rem;
+  }
+  .cart-item-img {
+    grid-area: img;
+  }
+  .cart-item-img img {
+    width: 100%;
+  }
+  .cart-item-info {
+    grid-area: name;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+  }
+  .cart-item-info h3 {
+    font-size: 3.2rem;
+    font-weight: 400;
+  }
+  .cart-item-numbers {
+    grid-area: numbers;
+    flex-flow: column nowrap;
+    justify-content: start;
+  }
+  
+  .cart-item-quantity-group {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .cart-item-quantity-group input[type="number"] {
+    width: 3rem;
+  }
+  .cart-item-quantity-group > p {
+    font-size: 1.4rem;
+    color: rgb(65,65,65);
+  }
+}
+@media screen and (min-width: 60rem) {
+  .cart-main {
+    grid-template-columns: 1fr 350px;
+  }
 }
