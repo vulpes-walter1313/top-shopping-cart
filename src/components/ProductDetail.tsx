@@ -65,7 +65,7 @@ export default function ProductDetail() {
               navigate("/cart");
             }}>Buy Now</button>
           </div>
-          {itemAdded && <div>Item was added ti your cart</div>}
+          {itemAdded && <div className='prod-detail-added-warning'><p>Item was added to your cart</p></div>}
         </div>
       </div>
     </div>
