@@ -29,4 +29,15 @@ describe("testing useCartLocalStorage Hook", () => {
     expect(result.current[0]).toHaveLength(2);
     expect(result.current[0][0]).toStrictEqual({productId: 1, quantity: 3});
   });
+  
+  test("Deleting an item",() => {
+    const {result} = renderHook(() => useCartLocalStorage());
+    act(() => {
+      result.current[1]({type: "add", payload: {id: 1, quantity: 1}});
+      result.current[1]({type: "add", payload: {id: 2, quantity: 3}});
+      result.current[1]({type: "delete", payload: {id: 1}});
+    });
+    expect(result.current[0]).toHaveLength(1);
+    expect(result.current[0][0]).toStrictEqual({productId: 2, quantity: 3});
+  });
 })
