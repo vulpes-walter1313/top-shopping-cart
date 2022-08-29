@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import "./ProductDetail.css";
 import { useParams, useNavigate } from 'react-router-dom';
 import data from "../data/trees.json";
@@ -11,6 +11,8 @@ export default function ProductDetail() {
   let params = useParams();
   let tree = data.find(tree => tree.id === parseInt(params.productId as string));
   const [quantity, setQuantity] = useState(1);
+  const [itemAdded, setItemAdded] = useState(false);
+  // eslint-disable-next-line
   const [cartData, cartDispatch] = useOutletContext<ContextType>();
   function addToCart(quantity: number) {
     cartDispatch({type: "add", payload: { id: tree!.id, quantity}});
@@ -25,6 +27,13 @@ export default function ProductDetail() {
       setQuantity(parseInt(e.target.value));
     }
   };
+
+  useEffect(() => {
+    const itemAddedReseter = setTimeout(() => {
+      setItemAdded(false);
+    }, 3000);
+    return () => clearTimeout(itemAddedReseter);
+  }, [itemAdded]);
 
   return (
     <div className='prod-detail-wrapper' onClick={(e: React.MouseEvent<HTMLDivElement>) => {
@@ -49,12 +58,14 @@ export default function ProductDetail() {
           <div className='prod-detail-desc-buttons'>
             <button onClick={() => {
               addToCart(quantity);
+              setItemAdded(true);
             }}>Add To Cart</button>
             <button onClick={() => {
               addToCart(quantity);
               navigate("/cart");
             }}>Buy Now</button>
           </div>
+          {itemAdded && <div>Item was added ti your cart</div>}
         </div>
       </div>
     </div>
