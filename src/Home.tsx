@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
-import "./Home.css";
+import styles from "./Home.module.css";
 
 export default function Home() {
+  console.log(styles);
   return (
     <>
       <header
-        className="hero-home"
+        className={styles.hero}
         style={{ backgroundImage: "url('./images/tree.jpg')" }}
       >
         <h1>
@@ -17,12 +18,12 @@ export default function Home() {
           Shop Trees
         </Link>
       </header>
-      <section className="featured-trees-sec">
+      <section className={styles.treesSec}>
         <h2>Featured Trees</h2>
-        <div className="featured-trees-container">
-          <div className="tree-card">
+        <div className={styles.treesContainer}>
+          <div className={styles.treeCard}>
             <img src="https://picsum.photos/200" alt="random pic"></img>
-            <p className="tree-card-name">Aspen</p>
+            <p className={styles.treeCardName}>Aspen</p>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt.
@@ -31,17 +32,17 @@ export default function Home() {
               Buy Now
             </Link>
           </div>
-          <div className="tree-card">
+          <div className={styles.treeCard}>
             <img src="https://picsum.photos/200" alt="random pic"></img>
-            <p className="tree-card-name">Live Oak</p>
+            <p className={styles.treeCardName}>Live Oak</p>
             <p>Odio tempor orci dapibus ultrices in iaculis nunc sed augue. </p>
             <Link className="btn-one" to="/shop">
               Buy Now
             </Link>
           </div>
-          <div className="tree-card">
+          <div className={styles.treeCard}>
             <img src="https://picsum.photos/200" alt="random pic"></img>
-            <p className="tree-card-name">Mexican Ash</p>
+            <p className={styles.treeCardName}>Mexican Ash</p>
             <p>
               Mi ipsum faucibus vitae aliquet. Nunc mattis enim ut tellus
               elementum.
@@ -52,11 +53,11 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="testimonial-sec">
-        <div className="testimonial-image">
+      <section className={styles.testimonialSec}>
+        <div className={styles.testimonialImage}>
           <img src="/images/grumpy-guy.jpg" alt="grumpy guy"></img>
         </div>
-        <div className="testimonial-quote-container">
+        <div className={styles.testimonialQuoteContainer}>
           <figure>
             <blockquote>
               <p>
@@ -68,8 +69,8 @@ export default function Home() {
           </figure>
         </div>
       </section>
-      <section className="home-mission-sec">
-        <div className="home-mission-content">
+      <section className={styles.homeMissionSec}>
+        <div className={styles.homeMissionContent}>
           <h2>The Mission</h2>
           <p>
             Our mission is to spread a wave of reforestation and aforestation to

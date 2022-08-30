@@ -1,4 +1,4 @@
-.hero-home {
+.hero {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
@@ -11,13 +11,8 @@
   background-color: rgb(0, 0, 0, 0.3);
   background-blend-mode: multiply;
 }
-
-/* Featured Trees Section */
-.featured-trees-sec h2 {
-  text-align: center;
-  padding: 2rem;
-}
-.featured-trees-container {
+/* Featured section */
+.treesContainer {
   display: grid;
   justify-content: center;
   margin: 0 auto 3rem;
@@ -26,79 +21,81 @@
   gap: 2rem;
 }
 
-.tree-card img {
+.treesSec h2 {
+  text-align: center;
+  padding: 2rem;
+}
+
+.treeCard img {
   width: 100%;
 }
-.tree-card p {
+.treeCard p {
   color: var(--neutral-black);
 }
-.tree-card .tree-card-name {
+.treeCard .treeCardName {
   font-size: 1.25rem;
   color: var(--clr-acc-1);
   padding: 1rem 0;
 }
-.tree-card .btn-one {
+.treeCard a {
   margin: 1rem auto;
 }
-
 /* Testimonial Section */
-.testimonial-sec {
+.testimonialSec {
   display: grid;
   background-color: var(--neutral-color);
 }
-.testimonial-image img {
+.testimonialImage img {
   width: 100%;
   height: 100%;
 }
-.testimonial-quote-container blockquote::before {
+.testimonialQuoteContainer blockquote::before {
   content: "“";
   color: var(--clr-primary);
   font-size: 4rem;
   transform: translate(40px);
 }
-.testimonial-quote-container figure {
+.testimonialQuoteContainer figure {
   padding: 1rem;
 }
-.testimonial-quote-container figcaption::before {
+.testimonialQuoteContainer figcaption::before {
   content: "― ";
   color: var(--clr-primary);
 }
-.testimonial-quote-container figcaption {
+.testimonialQuoteContainer figcaption {
   padding: 1rem 0;
   color: var(--clr-primary);
   font-size: 1.2rem;
 }
-.testimonial-quote-container blockquote {
+.testimonialQuoteContainer blockquote {
   font-size: 1.5rem;
   color: var(--neutral-black);
 }
-/* The Mission Section */
-
-.home-mission-sec {
+/* Mission Section */
+.homeMissionSec {
   background-color: var(--clr-primary);
   color: var(--neutral-white);
   display: grid;
   place-items: center;
   height: 20rem;
 }
-.home-mission-sec .home-mission-content {
+.homeMissionSec .homeMissionContent {
   max-width: 40rem;
   padding: 2rem;
 }
-.home-mission-sec .home-mission-content h2 {
+.homeMissionSec .homeMissionContent h2 {
   text-align: center;
   margin: 0 0 2rem;
 }
-.home-mission-sec .home-mission-content p {
+.homeMissionSec .homeMissionContent p {
   font-size: 1.2rem;
 }
-
-/* Media quiries */
+/* Media Queries */
 @media screen and (min-width: 48rem) {
-  .featured-trees-container {
+  .treesContainer {
     grid-template-columns: repeat(3, 1fr);
   }
-  .testimonial-sec {
+  .testimonialSec {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
