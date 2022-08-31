@@ -13,7 +13,6 @@ export default function Cart() {
   }, 0);
   const taxRate = 1.0825;
   const grandTotal = (subtotal * taxRate)
-  console.log(styles);
   return (
     <main className={styles.cartMain}>
       <div>
