@@ -1,7 +1,7 @@
 import React from "react";
-import "./Cart.css";
 import treeData from "../data/trees.json";
 import { useCartContext } from "../App";
+import styles from "./Cart.module.css";
 
 export default function Cart() {
   const [cartData, cartDispatch] = useCartContext();
@@ -13,29 +13,29 @@ export default function Cart() {
   }, 0);
   const taxRate = 1.0825;
   const grandTotal = (subtotal * taxRate)
-
+  console.log(styles);
   return (
-    <main className="cart-main">
+    <main className={styles.cartMain}>
       <div>
         <h1>Cart Items</h1>
-        <div className="cart-items-group">
+        <div className={styles.cartItemsGroup}>
           {/* First check if there are no items to add a placeholder */}
           {cartData.length === 0 ? "There are no items" : null}
           {cartData.map((item) => {
             const tree = treeData.find(tree => tree.id === item.productId);
             return (
-              <div className="cart-item" key={item.productId}>
-                <div className="cart-item-img">
+              <div className={styles.cartItem} key={item.productId}>
+                <div className={styles.cartItemImg}>
                   <img src={tree?.img} alt={tree?.desc}/>
                 </div>
-                <div className="cart-item-info">
+                <div className={styles.cartItemInfo}>
                   <h3>{tree?.name}</h3>
-                  <div className="cart-item-quantity-group">
+                  <div className={styles.ItemQuantityGroup}>
                     <p>Quantity: </p>
                     <input type="number" value={item.quantity} onChange={(e) => {cartDispatch({type: "update", payload: {id: item.productId, quantity: parseInt(e.target.value)}})}} />
                   </div>
                 </div>
-                <div className="cart-item-numbers">
+                <div className={styles.cartItemNumbers}>
                   <p>${tree?.price} ea.</p>
                   <p>Total ${(tree?.price! * item.quantity).toFixed(2)}</p>
                   <button onClick={() => cartDispatch({type: "delete", payload: {id: item.productId}})}>Remove</button>
@@ -45,7 +45,7 @@ export default function Cart() {
           })}
         </div>
       </div>
-      <div className="cart-order-totals-group">
+      <div className={styles.orderTotalGroup}>
         <h2>Order Totals</h2>
         <div>
           <p>Subtotal</p>
