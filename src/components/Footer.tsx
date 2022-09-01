@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Footer.css";
+import styles from "./Footer.module.css";
 
 export default function Footer() {
   return (
-    <footer className="footer">
-      <div className="footer-content">
-        <div className="footer-left-links">
+    <footer className={styles.footer}>
+      <div className={styles.content}>
+        <div>
           <ul>
             <Link to="/">
               <li>Home</li>
@@ -19,7 +19,7 @@ export default function Footer() {
             </Link>
           </ul>
         </div>
-        <div className="footer-right-links">
+        <div className={styles.rightLinks}>
           <ul>
             <Link to="/">
               <li>Faq</li>
@@ -32,7 +32,7 @@ export default function Footer() {
             </Link>
           </ul>
         </div>
-        <div className="footer-bottom-center">
+        <div className={styles.bottomCenter}>
           <p>Tree Shoppe, LLC 2022</p>
         </div>
       </div>

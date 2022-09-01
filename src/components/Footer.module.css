@@ -3,7 +3,7 @@
   color: var(--neutral-white);
   padding: 3rem 2rem 1rem;
 }
-.footer-content {
+.content {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: 
@@ -13,41 +13,41 @@
   gap: 1rem;
   place-items: center;
 }
-.footer-content .footer-right-links {
+.content .rightLinks {
   grid-area: left;
 }
-.footer-content .footer-right-links {
+.content .rightLinks {
   grid-area: right;
 }
-.footer-content .footer-bottom-center {
+.content .bottomCenter {
   grid-area: center;
 }
-.footer-content a {
+.content a {
   text-decoration: none;
   color: inherit;
   font-size: 1.2rem;
 }
-.footer-content li {
+.content li {
   list-style: none;
   text-align: center;
 }
 /* Media Quieries */
 
 @media screen and (min-width: 48em) {
-  .footer-content {
+  .content {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
       "left right"
       "center center";
     place-items: unset;
   }
-  .footer-content li {
+  .content li {
     text-align: left;
   }
-  .footer-right-links li {
+  .rightLinks li {
     text-align: right;
   }
-  .footer-bottom-center p {
+  .bottomCenter p {
     text-align: center;
   }
 }
