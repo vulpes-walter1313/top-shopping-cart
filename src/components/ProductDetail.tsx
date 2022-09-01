@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import "./ProductDetail.css";
+import styles from "./ProductDetail.module.css";
 import { useParams, useNavigate } from 'react-router-dom';
 import data from "../data/trees.json";
 import { useOutletContext } from 'react-router-dom';
@@ -36,26 +36,26 @@ export default function ProductDetail() {
   }, [itemAdded]);
 
   return (
-    <div className='prod-detail-wrapper' onClick={(e: React.MouseEvent<HTMLDivElement>) => {
-      if ((e.target as HTMLDivElement).classList.contains('prod-detail-wrapper')) {
+    <div className={styles.detailWrapper} onClick={(e: React.MouseEvent<HTMLDivElement>) => {
+      if ((e.target as HTMLDivElement).classList.contains(styles.detailWrapper)) {
         navigate("/shop")
       }
       }}>
-      <div className='prod-detail-content'>
+      <div className={styles.detailContent}>
         <img src={tree?.img} alt={tree?.desc}/>
-        <div className='prod-detail-description'>
+        <div className={styles.detailDescription}>
           <div>
-            <p className='tree-title'>{tree?.name}</p>
+            <p className={styles.treeTitle}>{tree?.name}</p>
             <ul>
               <li>{tree?.desc}</li>
               <li>{tree?.leaf}</li>
             </ul>
           </div>
-          <div className='prod-detail-desc-price-container'>
+          <div className={styles.detailDescPriceContainer}>
             <input type='number' value={quantity} onChange={quantityChangeHandler}/>
             <p>${tree?.price}</p>
           </div>
-          <div className='prod-detail-desc-buttons'>
+          <div className={styles.detailDescButtons}>
             <button onClick={() => {
               addToCart(quantity);
               setItemAdded(true);
@@ -65,7 +65,7 @@ export default function ProductDetail() {
               navigate("/cart");
             }}>Buy Now</button>
           </div>
-          {itemAdded && <div className='prod-detail-added-warning'><p>Item was added to your cart</p></div>}
+          {itemAdded && <div className={styles.detailAddedWarning}><p>Item was added to your cart</p></div>}
         </div>
       </div>
     </div>
