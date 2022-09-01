@@ -1,6 +1,6 @@
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import data from "../data/trees.json";
-import "./Shop.css";
+import styles from "./Shop.module.css";
 import { useCartContext } from "../App";
 
 export default function Shop() {
@@ -9,13 +9,14 @@ export default function Shop() {
   function addItemToCart(id: number, quantity: number) {
     cartDispatch({ type: "add", payload: { id, quantity } });
   }
+  console.log(styles);
   return (
     <>
-      <header className="shop-header">
+      <header className={styles.header}>
         <h1>Tree Products</h1>
       </header>
-      <div className="shop-products-container">
-        <div className="shop-product-categories-container">
+      <div className={styles.productsContainer}>
+        <div className={styles.productCategoriesContainer}>
           <p>Categories</p>
           <ul>
             <Link to="/shop">
@@ -35,31 +36,31 @@ export default function Shop() {
             </Link>
           </ul>
         </div>
-        <main className="shop-products-list-container">
+        <main className={styles.productsListContainer}>
           {data.map((tree) => {
             return (
-              <div className="shop-product-card" key={tree.id}>
+              <div className={styles.productCard} key={tree.id}>
                 <div>
                   <img src={tree.img} alt={tree.name} />
-                  <div className="shop-product-details">
-                    <p className="product-name">{tree.name}</p>
-                    <ul className="product-details">
+                  <div className={styles.productDetails}>
+                    <p className={styles.productName}>{tree.name}</p>
+                    <ul className={styles.productDetails}>
                       <li>{tree.desc}</li>
                       <li>{tree.leaf}</li>
                     </ul>
                   </div>
                 </div>
-                <div className="product-buttons">
+                <div className={styles.productButtons}>
                   <button
                     onClick={() => {
                       navigate("/shop/" + tree.id);
                     }}
-                    className="product-button"
+                    className={styles.productButton}
                   >
                     View Details
                   </button>
                   <button
-                    className="product-button"
+                    className={styles.productButton}
                     onClick={() => {
                       addItemToCart(tree.id, 1);
                     }}
