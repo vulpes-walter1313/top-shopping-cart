@@ -59,15 +59,15 @@
   font-weight: 600;
   border-radius: 8px;
 }
-.ItemQuantityGroup {
+.itemQuantityGroup {
   display: flex;
   gap: 2rem;
 }
 
-.ItemQuantityGroup input[type="number"] {
+.itemQuantityGroup input[type="number"] {
   width: 3rem;
 }
-.ItemQuantityGroup > p {
+.itemQuantityGroup > p {
   font-size: 1.4rem;
   color: rgb(65,65,65);
 }
@@ -124,15 +124,15 @@
     justify-content: start;
   }
   
-  .ItemQuantityGroup {
+  .itemQuantityGroup {
     display: flex;
     gap: 2rem;
   }
   
-  .ItemQuantityGroup input[type="number"] {
+  .itemQuantityGroup input[type="number"] {
     width: 3rem;
   }
-  .ItemQuantityGroup > p {
+  .itemQuantityGroup > p {
     font-size: 1.4rem;
     color: rgb(65,65,65);
   }

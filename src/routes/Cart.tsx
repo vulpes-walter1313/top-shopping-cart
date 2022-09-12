@@ -29,7 +29,7 @@ export default function Cart() {
                 </div>
                 <div className={styles.cartItemInfo}>
                   <h3>{tree?.name}</h3>
-                  <div className={styles.ItemQuantityGroup}>
+                  <div className={styles.itemQuantityGroup}>
                     <p>Quantity: </p>
                     <input type="number" value={item.quantity} onChange={(e) => {cartDispatch({type: "update", payload: {id: item.productId, quantity: parseInt(e.target.value)}})}} />
                   </div>
