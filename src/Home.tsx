@@ -21,31 +21,37 @@ export default function Home() {
         <h2>Featured Trees</h2>
         <div className={styles.treesContainer}>
           <div className={styles.treeCard}>
-            <img src="https://picsum.photos/200" alt="random pic"></img>
-            <p className={styles.treeCardName}>Aspen</p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt.
-            </p>
+            <div>
+              <img src="https://picsum.photos/200" alt="random pic"></img>
+              <p className={styles.treeCardName}>Aspen</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt.
+              </p>
+            </div>
             <Link className="btn-one" to="/shop">
               Buy Now
             </Link>
           </div>
           <div className={styles.treeCard}>
-            <img src="https://picsum.photos/200" alt="random pic"></img>
-            <p className={styles.treeCardName}>Live Oak</p>
-            <p>Odio tempor orci dapibus ultrices in iaculis nunc sed augue. </p>
+            <div>
+              <img src="https://picsum.photos/200" alt="random pic"></img>
+              <p className={styles.treeCardName}>Live Oak</p>
+              <p>Odio tempor orci dapibus ultrices in iaculis nunc sed augue. </p>
+            </div>
             <Link className="btn-one" to="/shop">
               Buy Now
             </Link>
           </div>
           <div className={styles.treeCard}>
-            <img src="https://picsum.photos/200" alt="random pic"></img>
-            <p className={styles.treeCardName}>Mexican Ash</p>
-            <p>
-              Mi ipsum faucibus vitae aliquet. Nunc mattis enim ut tellus
-              elementum.
-            </p>
+            <div>
+              <img src="https://picsum.photos/200" alt="random pic"></img>
+              <p className={styles.treeCardName}>Mexican Ash</p>
+              <p>
+                Mi ipsum faucibus vitae aliquet. Nunc mattis enim ut tellus
+                elementum.
+              </p>
+            </div>
             <Link className="btn-one" to="/shop">
               Buy Now
             </Link>

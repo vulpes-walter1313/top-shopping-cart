@@ -26,6 +26,11 @@
   padding: 2rem;
 }
 
+.treeCard {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
 .treeCard img {
   width: 100%;
 }
